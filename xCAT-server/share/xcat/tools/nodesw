@@ -89,7 +89,7 @@ sub getSwitchInfo {
     my ($version, $community, @junk);
 
     # bunch of xCAT tables stuff here to connect to switch
-    my $info = `tabdump switches | grep smc001 | sed 's/"//g'`;
+    my $info = `tabdump switches | grep $switch | sed 's/"//g'`;
     if ($?) {
 
         # if not in here, we try the defaults.
